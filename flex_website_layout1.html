@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Website Layout 1</title>
+        <style>
+            * {
+                box-sizing: border-box; 
+            }
+
+            body {
+                display: flex;
+                min-height: 100vh;
+                flex-direction: column;
+                margin: 0;
+            }
+
+            #main {
+                display: flex;
+                flex-flow: row wrap;
+                font-weight: bold;
+            }
+
+            #main > section {
+                flex: 3 0px;
+                background:blanchedalmond;
+            }
+
+            #main > article {
+                flex-flow: row wrap;
+                order: 1;
+                text-align: left;
+            }
+
+            #main > nav, 
+            #main > aside {
+                flex: 0 0 20vw;
+            }
+
+            #main > nav {
+                background: #D7E8D4;
+                order: 3;
+            }
+
+            #main > aside {
+                background: beige;
+                order: 2;
+            }
+
+            header, footer {
+                background: yellowgreen;
+                height: 20vh;
+                font-weight: bold;
+            }
+
+            header, footer, article, nav, aside {
+                padding: 1em;
+                margin: 10px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <header>Header</header>
+        <div id="main">
+            <section>
+                <article>
+                    <h3>First Article</h3>
+                    <p>This id first article</p>
+                </article>
+                <article>
+                    <h3>Second Article</h3>
+                    <p>This is second article</p>
+                </article>
+                <article>
+                    <h3>Third Article</h3>
+                    <p>This is third article</p>
+                </article>
+            </section>
+            <nav>Nav</nav>
+            <aside>Aside</aside>
+        </div>
+        <footer>Footer</footer>
+    </body>
+</html>
